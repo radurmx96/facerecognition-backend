@@ -9,6 +9,9 @@ const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
 
+/*BEFORE doing this I kept getting an error code: 'DEPTH_ZERO_SELF_SIGNED_CERT'*/
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0
+
 const db = knex({
   client: 'pg',
   connection: {
