@@ -40,8 +40,8 @@ app.use(cors());
 			entries: 0,
 			joined: new Date()
 		}
-	]*/
-}
+	]
+}*/
 
 app.get('/', (req, res) => {
 	res.send('it is working!');
