@@ -12,7 +12,7 @@ const image = require('./controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-    connectionString : process.env.DAATABASE_URL, 
+    connectionString : process.env.DATABASE_URL, 
     ssl: true
   }
 });
@@ -22,7 +22,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const database = {
+/*const database = {
 	users: [
 		{
 			id: '123',
@@ -40,7 +40,7 @@ const database = {
 			entries: 0,
 			joined: new Date()
 		}
-	]
+	]*/
 }
 
 app.get('/', (req, res) => {
